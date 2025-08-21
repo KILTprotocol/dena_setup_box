@@ -1,0 +1,14 @@
+[Unit]
+Description=DENA SSI Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/ssi-server wss://spiritnet.kilt.io:443 3333 /home/pi/dist/ https://dena-attester.kilt.io https://opendid.kilt.io default http://localhost:3333/ did:kilt:4qGqegcXWctkdLToCSFfBAUQE5V5SBdwivaB6miWgXS6C6Cf did:kilt:4qGqegcXWctkdLToCSFfBAUQE5V5SBdwivaB6miWgXS6C6Cf#0x3f118f44708523d63deb4a88bd6c18591373745e9c72e6ac1afc21e89f48242c "pave pattern upon invest humble squirrel cram flight wood travel already hint//did//assertion//0" did:kilt:4qGqegcXWctkdLToCSFfBAUQE5V5SBdwivaB6miWgXS6C6Cf#0x4b77a1fb88c91ddd6e5ca84c821fa2c9c2f8fddb753c0f63afdda8c75c5e13af 0x2f6d186c07aca73f746e4cfe3d2600446bb518c333c77afd4fa44f62aec281b8 "pave pattern upon invest humble squirrel cram flight wood travel already hint//did//assertion//0" "pave pattern upon invest humble squirrel cram flight wood travel already hint//did//0"
+Restart=on-failure
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
